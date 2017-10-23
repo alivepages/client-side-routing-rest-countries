@@ -7,7 +7,7 @@ function showByLang(lang) {
 
   request
     .get('https://restcountries.eu/rest/v2/lang/' + lang)
-    .then(function saveStatesInAVariable(data) {
+    .then(function(data) {
       appContainer.innerHTML = countriesView(data.body);
     })
     .catch(errors)

@@ -7,10 +7,10 @@ function renderHome() {
 
   request
     .get('https://restcountries.eu/rest/v2/all')
-    .then(function saveStatesInAVariable(data) {
+    .then(function(data) {
       appContainer.innerHTML = countriesView(data.body);
     })
     .catch(errors)
 }
 
-export default errors;
+export default renderHome;
