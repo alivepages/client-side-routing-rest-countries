@@ -2,15 +2,15 @@ import request from 'superagent'
 import countriesView from './templateViews/countriesView'
 import errors from './errors'
 
-function renderHome() {
+function showByLang(lang) {
   const appContainer = document.querySelector('#app-container')
 
   request
-    .get('https://restcountries.eu/rest/v2/all')
+    .get('https://restcountries.eu/rest/v2/lang/' + lang)
     .then(function saveStatesInAVariable(data) {
       appContainer.innerHTML = countriesView(data.body);
     })
     .catch(errors)
 }
 
-export default errors;
+export default showByLang;

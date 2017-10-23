@@ -1,16 +1,12 @@
 import request from 'superagent'
 import {Router} from 'director/build/director'
 import renderHome from './renderhome'
-
-
-
+import showByLang from './showbylang'
 
 
 const routes = {
-  '/': renderHome
-  // '/about': showCvView,
-  // '/friends': showFriendsView,
-  // '/friends/:nationality': showFriendsByNationality
+  '/': renderHome,
+  '/lang/:lang': showByLang
 };
 
 const router = Router(routes);

@@ -378,6 +378,7 @@ img {
   background: #fff; }
 
 h1 {
+  margin-bottom: 0;
   background: #335;
   color: #fff;
   padding: 12px;
@@ -411,3 +412,27 @@ h1 {
 .country-flag {
   width: 120px;
   height: 80px; }
+
+
+.lang {
+  background: #FFC200;
+  ul {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      margin: 10px;
+      list-style: none;
+      a {
+        padding: 20px;
+        background-color: #B5DEFD;
+        display: block;
+        color: #000;
+        text-decoration: none;
+        &:hover {
+          background-color: #0074C0;
+        }
+      }
+    }
+  }
+}

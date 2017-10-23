@@ -1,8 +1,17 @@
-const countriesView = function(data, pageTitle = 'Countries Data'){
+const countriesView = function(data, pageTitle = 'Countries by language'){
   return `
       <h1>
-        ${pageTitle} 
+        ${pageTitle}
       </h1>
+      <div class="lang">
+        <ul>
+          <li><a href="/">All</a></li>
+          <li><a href="/#/lang/en">EN</a></li>
+          <li><a href="/#/lang/es">ES</a></li>
+          <li><a href="/#/lang/fr">FR</a></li>
+          <li><a href="/#/lang/pt">PT</a></li>
+        </ul>
+      </div>
       <div class="errors"></div>
       <div class="countries-container">
         ${ _createCountry(data)}
