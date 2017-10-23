@@ -1,5 +1,17 @@
-console.log('Webpack Simple Server')
-let coverEl = document.querySelector('.starter')
-let h2El = document.querySelector('h2.starter-txt')
-coverEl.className += ' loaded'
-h2El.textContent = 'Build: Webpack Simple Server'
+import request from 'superagent'
+import {Router} from 'director/build/director'
+import renderHome from './renderhome'
+
+
+
+
+
+const routes = {
+  '/': renderHome
+  // '/about': showCvView,
+  // '/friends': showFriendsView,
+  // '/friends/:nationality': showFriendsByNationality
+};
+
+const router = Router(routes);
+router.init('/');
