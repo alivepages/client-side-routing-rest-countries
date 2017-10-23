@@ -5,11 +5,11 @@ const countriesView = function(data, pageTitle = 'Countries by language'){
       </h1>
       <div class="lang">
         <ul>
-          <li><a href="/">All</a></li>
-          <li><a href="/#/lang/en">EN</a></li>
-          <li><a href="/#/lang/es">ES</a></li>
-          <li><a href="/#/lang/fr">FR</a></li>
-          <li><a href="/#/lang/pt">PT</a></li>
+          <li><a id="all" href="/">All</a></li>
+          <li><a id="en" href="/#/lang/en">EN</a></li>
+          <li><a id="es" href="/#/lang/es">ES</a></li>
+          <li><a id="fr" href="/#/lang/fr">FR</a></li>
+          <li><a id="pt" href="/#/lang/pt">PT</a></li>
         </ul>
       </div>
       <div class="errors"></div>
